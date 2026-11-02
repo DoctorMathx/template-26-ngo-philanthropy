@@ -1,0 +1,101 @@
+import type { Opportunity } from "@/lib/types";
+
+// Open calls / requests for proposals. Letters of inquiry are submitted on /how-we-work/grant-opportunities.
+
+export const opportunities: Opportunity[] = [
+  {
+    slug: "zero-dose-innovation-2026",
+    title: "Reaching zero-dose children in fragile and nomadic settings",
+    focus: "global-health",
+    status: "Open",
+    opens: "2026-10-01",
+    deadline: "2026-12-12",
+    budgetMinUsd: 250_000,
+    budgetMaxUsd: 1_500_000,
+    duration: "24–36 months",
+    geography: "Nigeria, Niger, Chad, Cameroon",
+    summary: "We invite proposals for practical, scalable approaches to identify and vaccinate children who have never received a routine vaccine, in partnership with state primary health care agencies.",
+    eligibility: ["Registered non-profit, university or research institute in Africa", "Demonstrated work with government immunisation programmes", "Annual budget above $200,000 for the last two years"],
+    priorities: ["Community-led microplanning", "Integration with routine services, not one-off campaigns", "Rigorous coverage measurement"],
+  },
+  {
+    slug: "women-agripreneurs-2026",
+    title: "Finance and markets for women agri-entrepreneurs",
+    focus: "agricultural-development",
+    status: "Open",
+    opens: "2026-09-15",
+    deadline: "2026-11-28",
+    budgetMinUsd: 150_000,
+    budgetMaxUsd: 750_000,
+    duration: "24 months",
+    geography: "Nigeria, Ghana, Kenya, Uganda",
+    summary: "Grants for organisations helping women-led agribusinesses access working capital, aggregation and reliable off-takers.",
+    eligibility: ["Women-led or women-focused organisations", "Existing network of at least 1,000 women farmers or processors", "Audited accounts for the last financial year"],
+    priorities: ["Blended finance and guarantees", "Digital records that build credit histories", "Climate-resilient value chains"],
+  },
+  {
+    slug: "instant-payments-research-2027",
+    title: "Research grants: inclusive instant payments and consumer protection",
+    focus: "financial-inclusion",
+    status: "Opening soon",
+    opens: "2027-01-12",
+    deadline: "2027-03-06",
+    budgetMinUsd: 50_000,
+    budgetMaxUsd: 300_000,
+    duration: "12–18 months",
+    geography: "Pan-African",
+    summary: "Research on how real-time payment systems can serve low-income users safely — fraud, redress, pricing and women’s use.",
+    eligibility: ["African universities, think tanks and research NGOs", "Principal investigator based in Africa", "Partnership with a regulator or payment-system operator encouraged"],
+    priorities: ["Open data and open-source outputs", "Gender-disaggregated analysis", "Policy-relevant findings within 12 months"],
+  },
+  {
+    slug: "foundational-literacy-states",
+    title: "State partnerships for foundational literacy",
+    focus: "education-digital-skills",
+    status: "Open",
+    opens: "2026-10-20",
+    deadline: "2027-01-23",
+    budgetMinUsd: 500_000,
+    budgetMaxUsd: 3_000_000,
+    duration: "36–48 months",
+    geography: "Nigeria (state-level)",
+    summary: "Multi-year support for organisations working with State Universal Basic Education Boards to adopt structured pedagogy in early-grade literacy and numeracy.",
+    eligibility: ["Formal agreement or MoU with a SUBEB", "Track record in teacher coaching at scale", "Commitment to independent learning assessment"],
+    priorities: ["Mother-tongue instruction", "Government ownership of costs by year 4", "Teacher guides in the public domain"],
+  },
+  {
+    slug: "girls-safe-spaces-2026",
+    title: "Adolescent girls’ safe spaces and delaying child marriage",
+    focus: "gender-equality",
+    status: "Closed",
+    opens: "2026-05-01",
+    deadline: "2026-07-31",
+    budgetMinUsd: 100_000,
+    budgetMaxUsd: 600_000,
+    duration: "24–36 months",
+    geography: "Ethiopia, Niger, Nigeria, Mozambique",
+    summary: "Programmes that combine safe-space mentoring, cash incentives and community engagement to keep girls in school and delay marriage.",
+    eligibility: ["Community-based organisations with girl-led governance", "Safeguarding policy in place"],
+    priorities: ["Girl-led design", "Engagement with religious and traditional leaders"],
+  },
+];
+
+export const grantmakingSteps = [
+  { title: "Letter of inquiry", body: "Submit a two-page LOI through our online form, against an open call or our general priorities.", time: "Any time / by deadline" },
+  { title: "Programme review", body: "A programme officer reviews your LOI against strategy fit and may schedule a call.", time: "4–6 weeks" },
+  { title: "Full proposal", body: "Invited applicants submit a full proposal, budget and results framework, with support from our team.", time: "6–8 weeks" },
+  { title: "Due diligence", body: "We review governance, finances and safeguarding. Smaller organisations get capacity support, not just scrutiny.", time: "4 weeks" },
+  { title: "Decision & agreement", body: "Grants above $1m are approved by the board’s grants committee; others by the CEO. We sign a grant agreement.", time: "2–4 weeks" },
+  { title: "Partnership & learning", body: "Light-touch reporting, annual learning conversations and an independent evaluation for larger grants.", time: "Life of grant" },
+];
+
+export const granteeResources = [
+  { title: "Narrative & financial reporting templates", body: "Six-monthly narrative template and annual financial report in Excel.", format: "DOCX · XLSX" },
+  { title: "Results framework guide", body: "How to set indicators, baselines and targets — with worked examples per focus area.", format: "PDF · 18 pages" },
+  { title: "Branding & communications guidelines", body: "How to acknowledge Meridian funding, use our logo and coordinate press.", format: "PDF · 12 pages" },
+  { title: "Safeguarding policy & incident reporting", body: "Our minimum standards and the confidential reporting channel.", format: "PDF · 9 pages" },
+  { title: "Budget template & indirect-cost policy", body: "We fund up to 20% indirect costs on project grants and full costs on core support.", format: "XLSX" },
+  { title: "Grantee perception survey results", body: "What our grantees told us in 2025, and what we changed.", format: "PDF · 24 pages" },
+];
+
+export const getOpportunity = (slug: string) => opportunities.find((o) => o.slug === slug);
